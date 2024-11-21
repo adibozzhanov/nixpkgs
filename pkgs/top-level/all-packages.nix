@@ -4086,10 +4086,6 @@ with pkgs;
 
   kdiff3 = libsForQt5.callPackage ../tools/text/kdiff3 { };
 
-  kubo-migrator-all-fs-repo-migrations = callPackage ../applications/networking/kubo-migrator/all-migrations.nix { };
-  kubo-migrator-unwrapped = callPackage ../applications/networking/kubo-migrator/unwrapped.nix { };
-  kubo-migrator = callPackage ../applications/networking/kubo-migrator { };
-
   kwalletcli = libsForQt5.callPackage ../tools/security/kwalletcli { };
 
   peruse = libsForQt5.callPackage ../tools/misc/peruse { };
@@ -13572,10 +13568,6 @@ with pkgs;
 
   bluejeans-gui = callPackage ../applications/networking/instant-messengers/bluejeans { };
 
-  bottles = callPackage ../applications/misc/bottles/fhsenv.nix { };
-
-  bottles-unwrapped = callPackage ../applications/misc/bottles { };
-
   breezy = with python3Packages; toPythonApplication breezy;
 
   cage = callPackage ../applications/window-managers/cage {
@@ -16819,10 +16811,6 @@ with pkgs;
   heroic = callPackage ../games/heroic/fhsenv.nix { };
 
   pmars-x11 = pmars.override { enableXwinGraphics = true; };
-
-  wipeout-rewrite = callPackage ../games/wipeout-rewrite {
-    inherit (darwin.apple_sdk.frameworks) Foundation;
-  };
 
   ### GAMES/DOOM-PORTS
 
